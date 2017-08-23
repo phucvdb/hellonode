@@ -39,7 +39,7 @@ node {
          * For this example, we're using a Volkswagen-type approach ;-) */
 
         app.inside {
-            sh 'docker-compose up -d'
+            sh 'eval $(/usr/local/bin/docker-machine env appsvr01) && /usr/local/bin/docker-compose up -d'
         }
     }
 }
